@@ -1,0 +1,266 @@
+p {
+    font-family: 'Prompt', sans-serif;
+    color: #ffffff;
+}
+
+p2 {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    color: #000000;
+    font-size: 15px;
+}
+
+p3 {
+    font-family: 'Prompt', sans-serif;
+    color: #000000;
+    font-size: 25px;
+    padding-left: 5px;
+}
+
+p4 {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    color: #000000;
+    font-size: 25px;
+    padding-left: 5px;
+}
+
+p5 {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    color: #ffffff;
+}
+
+h1 {
+    font-family: 'Prompt', sans-serif;
+    color: #ffffff;
+}
+
+h2 {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    color: #000000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    animation: fadeIn 1.5s ease-in-out;
+    background: linear-gradient(to bottom, #ffffff, #424141);
+    height: 170vh;
+
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 2em 0;
+    width: 100%;
+    animation: slideDown 1s ease-in-out;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    border-radius: 25%;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+    font-family: 'Prompt', sans-serif;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+main {
+    padding: 2em 0;
+    padding-left: 100px;
+}
+
+section {
+    margin-bottom: 2em;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+section:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+section:nth-child(3) {
+    animation-delay: 1s;
+}
+
+section:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    animation: slideUp 1s ease-in-out;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.image-container a {
+    position: relative;
+    margin-right: 10px; /* 이미지 간의 간격 조절 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+}
+
+.image-container img {
+    width: 100px;  /* 원하는 정사각형 크기로 설정 */
+    height: 100px; /* 원하는 정사각형 크기로 설정 */
+    object-fit: cover; /* 이미지 비율 유지하면서 크기 맞춤 */
+}
+
+.image-container a::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 110%; /* 이미지 위에 툴팁 표시 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    font-size: 12px;
+}
+
+.image-container a:hover::after {
+    opacity: 1;
+    
+}
+
+.image-container img:hover {
+    transform: scale(1.2); /* 이미지 확대 */
+    transition: transform 0.3s ease-in-out; /* 부드러운 전환 효과 */
+}
+
+.left-align {
+    float: left; /* 왼쪽으로 플로팅 */
+    margin-right: 50px; /* 오른쪽 마진을 추가하여 간격 조절 */
+}
+
+@media (max-width: 600px) {
+    p {
+        font-family: 'Prompt', sans-serif;
+        color: #ffffff;
+    }
+    
+    p2 {
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        color: #000000;
+        margin-left: -60px
+    }
+
+    p3 {
+        font-family: 'prompt', sans-serif;
+        color: #000000;
+        margin-left: -60px
+    }
+    p4 {
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        color: #000000;
+        margin-left: -60px
+    }
+
+    p5 {
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        color: #ffffff;
+        margin-left: -60px
+    }
+    
+    img {
+        width: 200px;
+        height: auto;
+        border-radius: 25%;
+        margin-left: -55px
+    }
+
+    h1 {
+        font-family: 'Prompt', sans-serif;
+        color: #ffffff;
+    }
+    
+    h2 {
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        color: #000000;
+        margin-left: -60px
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 5;
+        padding: 0;
+        box-sizing: border-box;
+        animation: fadeIn 1.5s ease-in-out;
+        background: linear-gradient(to bottom, #ffffff, #424141);
+        height: 340vh;
+    }
+
+}
+
+/* 애니메이션 키프레임 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
